@@ -36,6 +36,13 @@ body {
     background: #e5ddd5;
 }
 
+.container .rightSide .personal_chat {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #e5ddd5;
+}
+
 .container .rightSide::before {
     content: '';
     position: absolute;
@@ -48,7 +55,7 @@ body {
 }
 
 .container .leftSide .leftHeader,
-.container .rightSide .rightHeader {
+.container .rightSide .personal_chat .rightHeader {
     position: relative;
     width: 100%;
     height: 60px;
@@ -59,7 +66,15 @@ body {
     padding: 0 15px;
 }
 
-.container .leftSide .leftHeader .userImg,
+.container .leftSide .leftHeader .userImg {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    overflow: hidden;
+    /* border-radius: 40%; */
+    cursor: pointer;
+}
+
 .container .rightSide .rightHeader .userImg {
     position: relative;
     width: 40px;
@@ -75,7 +90,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 .container .leftSide .nav_icons,
@@ -340,3 +355,14 @@ body {
     border-radius: 30px;
     font-size: 1em;
 }
+
+    /* 기본적으로 요소 숨기기 */
+    #personal_chat {
+        display: none;
+    }
+    
+    /* active 클래스가 추가되었을 때 요소 표시하기 */
+    #personal_chat.active {
+        display: block;
+    }
+

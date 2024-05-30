@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./index.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
         <!-- Header part -->
             <div class="leftHeader">
                 <div class="userImg">
-                    <img src="./image/44.jpg" alt="img" class="cover">
+                    <img src="./image/overview_ci_logo01.png" alt="img" class="cover">
                 </div>
                 <ul class="nav_icons">
                     <li><ion-icon name="scan-circle-outline"></ion-icon></li>
@@ -28,21 +29,21 @@
         <!-- search part -->
             <div class="search_chat">
                 <div>
-                <input type="text" placeholder="대화를 검색하세요">
+                <input type="text" id="textInput" placeholder="대화를 검색하세요">
                 <ion-icon name="search-outline"></ion-icon>
                 </div>
             </div>
 
         <!-- chat list -->
             <div class="chatList">
-                <div class="block active">
+                <div class="block active" id="chat">
                     <div class="imgBox">
                         <img src="./image/11.jpg" alt="list" class="cover">
                     </div>
                     <div class="details">
                         <div class="listHead">
                             <h4>강 종 효</h4>
-                            <p class="time">11:18</p>
+                            <p class="time">2024-05-29T11:18:00</p>
                         </div>
                         <div class="message_p">
                             <p>사내 메신저 개발 구축 중입니다. 잘 활용해주세요.</p>
@@ -50,14 +51,14 @@
                     </div>
                 </div>
 
-                <div class="block unread">
+                <div class="block unread" id="chat">
                     <div class="imgBox">
                         <img src="./image/55.jpg" alt="list" class="cover">
                     </div>
                     <div class="details">
                         <div class="listHead">
                             <h4>이 준 원</h4>
-                            <p class="time">09:18</p>
+                            <p class="time">2024-05-29T09:18:00</p>
                         </div>
                         <div class="message_p">
                             <p>연차 입니다. day off~</p>
@@ -66,14 +67,14 @@
                     </div>
                 </div>
 
-                <div class="block unread">
+                <div class="block unread" id="chat">
                     <div class="imgBox">
                         <img src="./image/66.jpg" alt="list" class="cover">
                     </div>
                     <div class="details">
                         <div class="listHead">
                             <h4>오 혜 연</h4>
-                            <p class="time">09:25</p>
+                            <p class="time">2024-05-29T09:25:00</p>
                         </div>
                         <div class="message_p">
                             <p>상무님 비용 잘못 올렸네요~</p>
@@ -82,14 +83,14 @@
                     </div>
                 </div>
 
-                <div class="block">
+                <div class="block" id="chat">
                     <div class="imgBox">
                         <img src="./image/77.jpg" alt="list" class="cover">
                     </div>
                     <div class="details">
                         <div class="listHead">
                             <h4>김 정 민</h4>
-                            <p class="time">yesterday </p>
+                            <p class="time">2024-05-28</p>
                         </div>
                         <div class="message_p">
                             <p>상무님 맛있는거 사주세요~</p>
@@ -97,14 +98,14 @@
                     </div>
                 </div>
 
-                <div class="block">
+                <div class="block" id="chat">
                     <div class="imgBox">
                         <img src="./image/99.jpg" alt="list" class="cover">
                     </div>
                     <div class="details">
                         <div class="listHead">
                             <h4>김   별</h4>
-                            <p class="time">yesterday </p>
+                            <p class="time">2024-05-28</p>
                         </div>
                         <div class="message_p">
                             <p>저도 맛있는거 사주세요~~</p>
@@ -112,14 +113,14 @@
                     </div>
                 </div>
 
-                <div class="block">
+                <div class="block" id="chat">
                     <div class="imgBox">
                         <img src="./image/88.jpg" alt="list" class="cover">
                     </div>
                     <div class="details">
                         <div class="listHead">
                             <h4>김 나 영</h4>
-                            <p class="time">yesterday </p>
+                            <p class="time">2024-05-28</p>
                         </div>
                         <div class="message_p">
                             <p>오늘 입찰 하시나요? </p>
@@ -127,14 +128,14 @@
                     </div>
                 </div>
 
-                <div class="block">
+                <div class="block" id="chat">
                     <div class="imgBox">
                         <img src="./image/33.jpg" alt="list" class="cover">
                     </div>
                     <div class="details">
                         <div class="listHead">
                             <h4>신 은 철</h4>
-                            <p class="time">yesterday </p>
+                            <p class="time">2024-05-28</p>
                         </div>
                         <div class="message_p">
                             <p>내일 미팅 하시지요?? </p>
@@ -142,14 +143,14 @@
                     </div>
                 </div>
 
-                <div class="block">
+                <div class="block" id="chat">
                     <div class="imgBox">
                         <img src="./image/22.jpg" alt="list" class="cover">
                     </div>
                     <div class="details">
                         <div class="listHead">
                             <h4>김 현 민</h4>
-                            <p class="time">yesterday </p>
+                            <p class="time">2024-05-28</p>
                         </div>
                         <div class="message_p">
                             <p>아오 죽겠습니다요 ㅠ.ㅠ </p>
@@ -162,40 +163,43 @@
 
         <!-- rightSide -->
         <div class="rightSide">
-            <div class="rightHeader">
-                <div class="imgText">
-                    <div class="userImg">
-                        <img src="./image/11.jpg" class="cover">
+            <div class="personal_chat active" id="personal_chat">
+                <div class="rightHeader">
+                    <div class="imgText">
+                        <div class="userImg">
+                            <img src="./image/11.jpg" class="cover">
+                        </div>
+                        <h4>강종효<br><span>Online</span></h4>
                     </div>
-                    <h4>강종효<br><span>Online</span></h4>
+                    <ul class="nav_icons">
+                        <li><ion-icon name="search-outline"></ion-icon></li>
+                        <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+                    </ul>
                 </div>
-                <ul class="nav_icons">
-                    <li><ion-icon name="search-outline"></ion-icon></li>
-                    <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
-                </ul>
-            </div>
-            
-            <!-- chatBox -->
-            <div class="chatBox">
-                <div class="message friend_message">
-                    <p>준수 상무님 <br>연구소 개발 진행 사항이 어떻게 되나요? <br><span>11:15</span></p>
+                
+                <!-- chatBox -->
+                <div class="chatBox">
+                    <div class="message friend_message">
+                        <p>준수 상무님 <br>연구소 개발 진행 사항이 어떻게 되나요? <br><span>11:15</span></p>
+                    </div>
+                    <div class="message my_message">
+                        <p>안녕하십니까 대표님 <br><span>11:17</span></p>
+                    </div>
+                    <div class="message my_message">
+                        <p>사내 메신저 개발 구축 중입니다.<br> 잘 활용해주세요. <br><span>11:18</span></p>
+                    </div>
                 </div>
-                <div class="message my_message">
-                    <p>안녕하십니까 대표님 <br><span>11:17</span></p>
+    
+                <!-- chat input -->
+                <div class="chatBox_input">
+                    <ion-icon name="happy-outline"></ion-icon>
+                    <ion-icon name="attach-outline"></ion-icon>
+                    <input type="text" placeholder="메세지를 입력해주세요">
+                    <ion-icon name="mic"></ion-icon>
                 </div>
-                <div class="message my_message">
-                    <p>사내 메신저 개발 구축 중입니다.<br> 잘 활용해주세요. <br><span>11:18</span></p>
-                </div>
-            </div>
-
-            <!-- chat input -->
-            <div class="chatBox_input">
-                <ion-icon name="happy-outline"></ion-icon>
-                <ion-icon name="attach-outline"></ion-icon>
-                <input type="text" placeholder="메세지를 입력해주세요">
-                <ion-icon name="mic"></ion-icon>
             </div>
         </div>
     </div>
+
 </body>
 </html>
